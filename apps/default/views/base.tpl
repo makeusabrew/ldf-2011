@@ -2,7 +2,11 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>{setting value="site.title"}{if isset($title)}: - {$title}{/if}</title>
+    <title>{block name='title'}{setting value="site.title"}{/block}</title>
+{*
+ * omit the public/ bit and make sure to include the first slash for any links
+ * e.g: <link rel="stylesheet" href="/css/whatever.css" />
+ *}
 </head>
 <body>
     {block name="body"}<p>Your body content goes here.</p>{/block}
