@@ -52,6 +52,6 @@ class SiteTest extends SeleniumTestController {
      */
     public function testHomepageContents() {
         $this->open("/");
-        $this->assertTextPresent('Hello world!');
+        $this->assertTextPresent('Leeds Digital Festival is a celebration across the city throughout November');
     }
 }
