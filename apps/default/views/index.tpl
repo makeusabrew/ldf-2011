@@ -87,7 +87,21 @@
                             
                         </div>
                     </td>
-                    <td>Boom</td>
+                    <td>
+                        <div class=block>
+                        
+                            <h3>John&rsquo;s Event</h3>
+                            
+                            <hr>
+                            
+                            <p class=event-time><time>09:00</time>&ndash;<time>11:00</time></p>
+
+                            <p>Nulla tellus dui, interdum in mattis nec, tempus nec lorem.</p>
+                            
+                            <a class="btn more" href=#>More</a>
+                            
+                        </div>
+                    </td>
                     <td>Boom</td>
                     <td rowspan=2>Boom</td>
                 </tr>
