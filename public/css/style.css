@@ -88,7 +88,7 @@ abbr,acronym{
 
 a,dt,
 h1,h2,h3,h4,h5,h6,
-.event-cal caption,.event-time,.site-nav span,
+.event-cal caption,.event-time,.link-block span,
 .post-title span,.source{
 	color:#1bdd1d;
 }
@@ -108,7 +108,7 @@ h1,h2,h3,h4,h5,h6,
 	color:#fff;
 }
 
-.block,.post-title{
+.block,.post-title,.event-cal caption{
 	border:1px solid #1bdd1d;
 }
 
@@ -134,12 +134,12 @@ p,ul,ol,dl,table,hr,dd,blockquote,
 }
 
 .event-cal .current span,
-.site-nav .current a:before,
+.link-block .current a:before,
 .btn,.page-tag{
 	background-color:#1bdd1d;
 }
 
-.site-nav span:after,
+.link-block span:after,
 dt:after,
 .post-title span:after{
 	content:" —";
@@ -274,32 +274,32 @@ Abstraction, as per http://csswizardry.com/2011/09/the-nav-abstraction/
 .nav a{
 	display:inline-block;
 }
-.site-nav li{
+.link-block li{
 	width:33.333%;
 	float:left;
 }
-.site-nav a{
+.link-block a{
 	padding-top:1em;
 	display:block;
 	color:#666;
 	position:relative;
 	text-transform:lowercase;
 }
-	.site-nav a:hover{
+	.link-block a:hover{
 		text-decoration:none;
 	}
-	.site-nav a:hover span{
+	.link-block a:hover span{
 		text-decoration:underline;
 	}
-.site-nav span{
+.link-block span{
 	text-transform:none;
 	display:block;
 	font-weight:bold;
 }
-.site-nav .current a{
+.link-block .current a{
 	text-decoration:none;
 }
-.site-nav a:before{
+.link-block a:before{
 	background-color:#fff;
 	content:"";
 	width:12px;
@@ -309,7 +309,7 @@ Abstraction, as per http://csswizardry.com/2011/09/the-nav-abstraction/
 	top:-1px;
 	left:-12px;
 }
-.site-nav .current a:before{
+.link-block .current a:before{
 	top:0;
 	left:0;
 }
@@ -330,7 +330,7 @@ Abstraction, as per http://csswizardry.com/2011/09/the-nav-abstraction/
 .block > :last-child{
 	margin-bottom:0;
 }
-	.site-nav.block{
+	.link-block.block{
 		padding:0;
 	}
 	td .block{
@@ -479,6 +479,7 @@ td .block .btn{
 	width:100%;
 	max-width:100%;
 	overflow:auto;
+	background:#fff;
     background:rgba(255,255,255,0.75);
     
     /* IE7 is a dick... */
@@ -501,6 +502,9 @@ td .block .btn{
 }
 .event-cal col{
 	width:14.285%;
+}
+.event-cal caption{
+	border-width:1px 0 0 0;
 }
 .event-cal caption,
 .event-cal thead,

@@ -128,13 +128,13 @@
                 <tr>
                     <th scope=col class=current>
                         <i class="s table-toggle"></i>
-                        <span>Day 01</span>
-                        <span><time datetime=2011-11-01>01-11-11</time></span>
+                        <span>Day 08</span>
+                        <span><time datetime=2011-11-08>08-11-11</time></span>
                     </th>
                     <th scope=col>
                         <i class="s table-toggle"></i>
-                        <span>Day 02</span>
-                        <span><time datetime=2011-11-02>02-11-11</time></span>
+                        <span>Day 09</span>
+                        <span><time datetime=2011-11-09>09-11-11</time></span>
                     </th>
                     <th scope=col>
                         <i class="s table-toggle"></i>
