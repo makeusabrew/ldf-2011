@@ -19,6 +19,8 @@ EVENT-CALENDAR
 TABLES
 SPRITES
 MISC
+EDIT-MODE
+RESPONSIVE
 */
 
 
@@ -207,11 +209,6 @@ html{
 	min-height:100%;
 	padding:2%;
 	overflow-y:scroll;
-	
-	word-wrap:break-word;
-	-webkit-hyphens:auto;
-	-moz-hyphens:auto;
-	hyphens:auto;
 }
 
 
@@ -443,7 +440,6 @@ blockquote{
 	$BUTTONS
 \*------------------------------------*/
 .btn{
-	text-decoration:none;
 	display:inline-block;
 	padding:0.25em 0.5em;
 	border-top:2px solid #7ded7f;
@@ -453,6 +449,9 @@ blockquote{
 	-webkit-box-shadow:0 1px 0 #fff inset;
 	box-shadow:0 1px 0 #fff inset;
 }
+    .btn:hover{
+        text-decoration:none;
+    }
 .btn.more:after{
 	content:" +";
 }
@@ -478,9 +477,13 @@ td .block .btn{
 \*------------------------------------*/
 .pane{
 	width:100%;
-	overflow:scroll;
-	overflow-x:scroll;
-	overflow-y:auto;
+	max-width:100%;
+	overflow:auto;
+    background:rgba(255,255,255,0.75);
+    
+    /* IE7 is a dick... */
+    zoom:1;
+    position:relative;
 }
 .panels{
 	width:400%; /* This figure should be: 100 * <amount of tables>% */
@@ -490,12 +493,18 @@ td .block .btn{
 	border-top:1px solid #cecece;
 	float:left;
 	margin-bottom:0;
+	
+	word-wrap:break-word;
+	-moz-hyphens:auto;
+	-webkit-hyphens:auto;
+	hyphens:auto;
 }
 .event-cal col{
 	width:14.285%;
 }
 .event-cal caption,
-.event-cal thead{
+.event-cal thead,
+.event-cal th{
 	background-color:#fff;
 }
 .event-cal caption,
@@ -508,10 +517,12 @@ td .block .btn{
 	display:block;
 	float:left;
 	clear:left;
+    white-space:nowrap;
+    background-color:#fff;
+    padding:0 0.5em;
 }
 	.event-cal .current span{
 		color:#fff;
-		padding:0 0.5em;
 	}
 
 .event-cal th{
@@ -591,3 +602,31 @@ hr{
 }
 ::selection			{ background-color:#1bdd1d; color:#fff; }
 ::-moz-selection	{ background-color:#1bdd1d; color:#fff; }
+
+
+
+
+
+/*------------------------------------*\
+	$EDIT-MODE
+\*------------------------------------*/
+html.edit .event-cal th,
+html.edit .event-cal td{
+	border:1px solid red;
+}
+
+
+
+
+
+/*------------------------------------*\
+	$RESPONSIVE
+\*------------------------------------*/
+@media(max-width: 640px){
+html{
+	word-wrap:break-word;
+	-moz-hyphens:auto;
+	-webkit-hyphens:auto;
+	hyphens:auto;
+}
+}
