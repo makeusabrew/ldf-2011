@@ -629,7 +629,7 @@ html.edit .event-cal td{
 /*------------------------------------*\
 	$RESPONSIVE
 \*------------------------------------*/
-@media(max-width: 640px){
+@media(max-width: 800px){
 html{
 	word-wrap:break-word;
 	-moz-hyphens:auto;
