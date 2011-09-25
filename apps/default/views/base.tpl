@@ -55,14 +55,14 @@
         
             <h1 class=shadow>Leeds Digital Festival</h1>
         
-            <ul class="block nav link-block">
-                <li class=current><a href=#>
+            <ul class="nav link-block">
+                <li class=current><a href=# class=block>
                     <span>About</span> the festival
                 </a></li>
-                <li><a href=#>
+                <li><a href=# class=block>
                     <span>Events</span> during the festival
                 </a></li>
-                <li><a href=#>
+                <li><a href=# class=block>
                     <span>Blog</span> about digital Leeds
                 </a></li>
             </ul>
@@ -71,14 +71,14 @@
             
             <p>Starting on November 1st there will be a host of events, shows, lectures and meet-up to bring the digital community together.</p>
         
-            <ul class="block nav link-block">
-                <li><a href=#>
+            <ul class="nav link-block">
+                <li><a href=# class=block>
                     <span>Twitter</span> @ldsdigital
                 </a></li>
-                <li><a href=#>
+                <li><a href=# class=block>
                     <span>Facebook</span> Let&rsquo;s be friends
                 </a></li>
-                <li><a href=#>
+                <li><a href=# class=block>
                     <span>Email</span> Get involved
                 </a></li>
             </ul>

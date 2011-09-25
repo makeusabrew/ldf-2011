@@ -283,14 +283,16 @@ Abstraction, as per http://csswizardry.com/2011/09/the-nav-abstraction/
 	display:inline-block;
 }
 .link-block li{
-	width:33.333%;
+	width:29.333%;
 	float:left;
+	padding-right:4%;
+}
+.link-block .block{
+	padding:1em 0 0;
 }
 .link-block a{
-	padding-top:1em;
 	display:block;
 	color:#666;
-	position:relative;
 	text-transform:lowercase;
 }
 	.link-block a:hover{
@@ -307,17 +309,12 @@ Abstraction, as per http://csswizardry.com/2011/09/the-nav-abstraction/
 .link-block .current a{
 	text-decoration:none;
 }
-.link-block a:before{
-	background-color:#fff;
+.link-block .current a:before{
 	content:"";
 	width:12px;
 	height:12px;
 	display:block;
 	position:absolute;
-	top:-1px;
-	left:-12px;
-}
-.link-block .current a:before{
 	top:0;
 	left:0;
 }
@@ -629,7 +626,7 @@ html.edit .event-cal td{
 /*------------------------------------*\
 	$RESPONSIVE
 \*------------------------------------*/
-@media(max-width: 800px){
+@media screen and (max-width: 800px){
 html{
 	word-wrap:break-word;
 	-moz-hyphens:auto;
