@@ -38,6 +38,11 @@ class AdminController extends Controller {
         }
     }
 
+    public function logout() {
+        $this->adminUser->logout();
+        return $this->redirectAction("login");
+    }
+
     public function index() {
         $this->assign('events', Table::factory('Events')->findAll());
     }

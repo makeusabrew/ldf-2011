@@ -6,3 +6,7 @@ body {
     width:800px;
     height:400px;
 }
+
+.page-header h1 {
+    margin-top:8px;
+}
