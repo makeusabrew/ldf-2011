@@ -88,6 +88,32 @@
         <div class=block>
         
             <h2>Supporters</h2>
+
+			<form action=#>
+				<fieldset>
+					<legend>Contact Leeds Digital Festival</legend>
+					
+					<p>
+						<label for=name>Name <small>(required)</small></label>
+						<input type=text class=text-input id="name">
+					</p>
+					
+					<p>
+						<label for=email>Email <small>(required)</small></label>
+						<input type=email class=text-input id="email" placeholder=you@yours.com>
+					</p>
+					
+					<p>
+						<label for=message>Message <small>(required)</small></label>
+						<textarea rows=10 cols=50 id="message"></textarea>
+					</p>
+					
+					<p>
+						<input type=submit class=btn value=Send!>
+					</p>
+					
+				</fieldset>
+			</form>
             
         </div>
         

@@ -14,6 +14,7 @@ FOOTER
 NAV
 BLOCKS
 TYPE
+FORMS
 BUTTONS
 EVENT-CALENDAR
 TABLES
@@ -89,7 +90,8 @@ abbr,acronym{
 a,dt,
 h1,h2,h3,h4,h5,h6,
 .event-cal caption,.event-time,.link-block span,
-.post-title span,.source{
+.post-title span,.source,
+legend,label{
 	color:#1bdd1d;
 }
 
@@ -116,7 +118,10 @@ h1,h2,h3,h4,h5,h6,
 	hyphens:auto;
 }
 
-.block,.post-title,.event-cal caption{
+.block,.post-title,.event-cal caption,
+fieldset,
+.text-input:active,.text-input:focus,
+textarea:active,textarea:focus{
 	border:1px solid #1bdd1d;
 }
 
@@ -150,7 +155,14 @@ p,ul,ol,dl,table,hr,dd,blockquote,
 .link-block span:after,
 dt:after,
 .post-title span:after{
-	content:" —";
+	content:"\00A0—";
+}
+
+label,
+.text-input,
+textarea,
+.btn{
+	cursor:pointer;
 }
 
 
@@ -438,6 +450,66 @@ blockquote{
 .source:before{
     content:"—";
 }
+/*--- MISC ---*/
+small{
+	font-size:10px;
+	font-size:0.833rem;
+	font-weight:inherit;
+}
+
+
+
+
+
+/*------------------------------------*\
+	$FORMS
+\*------------------------------------*/
+legend{
+	font-weight:bold;
+}
+label{
+	display:block;
+	font-weight:bold;
+}
+	label small{
+		color:#999;
+		font-weight:normal;
+	}
+fieldset{
+	padding:1em;
+}
+fieldset > p:last-child{
+	margin-bottom:0;
+}
+input,
+textarea{
+	font:inherit;
+	
+	-moz-transition:0.2s linear all;
+	-webkit-transition:0.2s linear all;
+	transition:0.2s linear all;
+}
+.text-input,
+textarea{
+	border:1px solid #ccc;
+	background-color:#fff;
+	width:100%;
+	padding:0.5em;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+}
+.text-input:active,
+.text-input:focus,
+textarea:active,
+textarea:focus{
+	cursor:text;
+	outline:none;
+	border-color:1px solid #ccc;
+	-moz-box-shadow:0 0 10px rgba(0,0,0,0.1) inset;
+	-webkit-box-shadow:0 0 10px rgba(0,0,0,0.1) inset;
+	box-shadow:0 0 10px rgba(0,0,0,0.1) inset;
+}
 
 
 
@@ -459,11 +531,18 @@ blockquote{
     .btn:hover{
         text-decoration:none;
     }
+	input.btn{
+		border:none;
+	
+		-moz-box-shadow:none;
+		-webkit-box-shadow:none;
+		box-shadow:none;
+	}
 .btn.more:after{
-	content:" +";
+	content:"\00A0+";
 }
 .btn.less:after{
-	content:" -";
+	content:"\00A0-";
 }
 td .block .btn{
 	position:absolute;
