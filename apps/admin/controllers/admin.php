@@ -6,13 +6,17 @@ class AdminController extends Controller {
         $this->adminUser = Table::factory('Users')->loadFromSession();
         $this->assign('adminUser', $this->adminUser);
         switch ($this->path->getAction()) {
-            case "index":
+            case "login":
+                if ($this->adminUser->isAuthed() == true) {
+                    $this->redirectAction("index");
+                    throw new CoreException("Already Authed");
+                }
+                break;
+            default:
                 if ($this->adminUser->isAuthed() == false) {
                     $this->redirectAction("login");
                     throw new CoreException("Not Authed");
                 }
-                break;
-            default:
                 break;
         }
     }
@@ -64,10 +68,10 @@ class AdminController extends Controller {
         // this might need to change in future
         if ($this->request->isPost()) {
             $data = array();
+            $event = Table::factory('Events')->newObject();
             foreach ($event->getColumns() as $field => $settings) {
                 $data[$field] = $this->request->getVar($field);
             }
-            $event = Table::factory('Events')->newObject();
             if ($event->setValues($data)) {
                 $event->save();
                 return $this->redirectAction("index", "Event created");
