@@ -33,12 +33,14 @@ class Events extends Table {
                 "type" => "text",
             ),
             "organiser_email" => array(
+                "title" => "Contact details",
                 "type" => "email",
             ),
             "website" => array(
                 "type" => "text",
             ),
             "tickets_url" => array(
+                "title" => "Tickets URL",
                 "type" => "text",
             ),
         ),

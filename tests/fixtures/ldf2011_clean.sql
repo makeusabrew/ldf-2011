@@ -49,6 +49,35 @@ LOCK TABLES `events` WRITE;
 INSERT INTO `events` VALUES (1,'2011-10-02 14:00:11','2011-10-02 14:00:11','2011-11-01 10:00:00','2011-11-01 16:00:00','Web Changes Everything','TBC','TBC','TBC','','','',''),(2,'2011-10-02 14:00:11','2011-10-02 14:00:11','2011-11-01 17:30:00','2011-11-01 22:00:00','Opening Night','Free - ticket only','Munro House','LS9 8AG','','','',''),(3,'2011-10-02 14:02:23','2011-10-02 14:02:23','2011-11-01 10:00:00','2011-11-01 16:00:00','OpenCoffee and Coworking open day','Open to all','Old Broadcasting House','LS2 9EN','','','',''),(4,'2011-10-02 14:02:23','2011-10-02 14:02:23','2011-11-02 12:15:00','2011-11-02 13:45:00','Leeds Digital Lunch: ecommerce','£2','The Adelphi','LS10 1JQ','','','',''),(5,'2011-10-02 14:04:16','2011-10-02 14:04:16','2011-11-03 00:00:00','2011-11-03 12:00:00','Doing it for the kids','TBC','TBC','TBC','','','',''),(6,'2011-10-02 14:04:16','2011-10-02 14:04:16','2011-11-02 18:30:00','2011-11-02 21:30:00','Girl Geeks','£15','Mint Hotel','LS1 4BR','','','',''),(7,'2011-10-02 14:06:34','2011-10-02 14:06:34','2011-11-07 00:00:00','2011-11-08 12:00:00','Fast Track Digital Marketing - Leeds Digital Festival Training','£870 but use discount code LDFT20 to get additional money off','TBC','TBC','','','',''),(8,'2011-10-02 14:06:34','2011-10-02 14:06:34','2011-11-08 18:00:00','2011-11-08 21:30:00','Write-Publish-Read','£8.50','Leeds Central Library','LS1 3AB','','','','');
 /*!40000 ALTER TABLE `events` ENABLE KEYS */;
 UNLOCK TABLES;
+
+--
+-- Table structure for table `users`
+--
+
+DROP TABLE IF EXISTS `users`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `users` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `created` datetime NOT NULL,
+  `updated` datetime NOT NULL,
+  `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `password` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `forename` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `surname` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `users`
+--
+
+LOCK TABLES `users` WRITE;
+/*!40000 ALTER TABLE `users` DISABLE KEYS */;
+INSERT INTO `users` VALUES (1,'2011-10-02 14:43:39','2011-10-02 14:43:39','test@example.com','3c7eebfdd190f5277345afd5ea3dc73ee5907052','Test','User');
+/*!40000 ALTER TABLE `users` ENABLE KEYS */;
+UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -59,4 +88,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2011-10-02 14:06:42
+-- Dump completed on 2011-10-02 14:52:32
