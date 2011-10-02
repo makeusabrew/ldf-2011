@@ -52,6 +52,22 @@
             {assign var="value" value=$smarty.post.$field}
         {elseif isset($object) && $object->$field != null}
             {assign var="value" value=$object->$field}
+            {*
+                some types will need re-formatting for display purposes. It just so
+                happens that at the moment the only two types affected are those
+                which get "reset" to type == text, so we have to capture their
+                original types
+
+                N.B. this will fail if the object has an invalid value which
+                date_format doesn't understand... could be improved!
+            *}
+            {if isset($origtype)}
+                {if $origtype == "datetime"}
+                    {assign var="value" value=$value|date_format:"d/m/Y H:i:s"}
+                {elseif $origtype == "date"}
+                    {assign var="value" value=$value|date_format:"d/m/Y"}
+                {/if}
+            {/if}
         {/if}
     {/if}
     {* password? remove value *}
