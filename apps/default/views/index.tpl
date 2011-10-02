@@ -83,7 +83,7 @@
 
                             <p>Nulla tellus dui, interdum in mattis nec, tempus nec lorem.</p>
                             
-                            <a class="btn more" href=#>More</a>
+                            <a class="btn less" href=#>Less</a>
                             
                         </div>
                     </td>
