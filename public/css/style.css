@@ -136,7 +136,7 @@ html,
 }
 
 .s{
-	background-image:url(/public/img/css/sprites/sprite.png);
+	background-image:url(../img/css/sprites/sprite.png);
 }
 
 h1,h2,h3,h4,h5,h6,
@@ -217,8 +217,8 @@ html{
 	font-size:0.75em; /* 12px */
 	line-height:1.5; /* 18px */
 	color:#666;
-	background:url(/public/img/css/page/01.gif) fixed #fff;
-	background:url(/public/img/css/page/02.gif) fixed #fff;
+	background:url(../img/css/page/01.gif) fixed #fff;
+	background:url(../img/css/page/02.gif) fixed #fff;
 	min-height:100%;
 	padding:2%;
 	overflow-y:scroll;
@@ -565,7 +565,7 @@ td .block .btn{
 	}
 
 .event-cal th{
-	background:url(/public/img/css/tables/splitter.gif) right top no-repeat;
+	background:url(../img/css/tables/splitter.gif) right top no-repeat;
 }
 .event-cal thead{
 	background-position:left top;
