@@ -18,6 +18,7 @@ FORMS
 BUTTONS
 EVENT-CALENDAR
 TABLES
+IFRAMES
 SPRITES
 MISC
 EDIT-MODE
@@ -260,7 +261,6 @@ html{
 	float:left;
 	width:75%;
 	max-width:520px;
-	min-width:520px;
 }
 
 
@@ -666,6 +666,20 @@ caption{
 }
 caption b{
 	display:block;
+}
+
+
+
+
+
+/*------------------------------------*\
+	$IFRAMES
+\*------------------------------------*/
+iframe{
+	/* Use !important to always override inline width/height attributes. */
+	width:100%!important;
+	max-width:100%!important;
+	height:500px!important;
 }
 
 
