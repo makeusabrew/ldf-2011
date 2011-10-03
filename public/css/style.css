@@ -116,6 +116,11 @@ h1,h2,h3,h4,h5,h6,
 	hyphens:auto;
 }
 
+.inlimg {
+	margin-right: 5px;
+	margin-bottom: 5px;
+}
+
 .block,.post-title,.event-cal caption{
 	border:1px solid #1bdd1d;
 }
@@ -131,7 +136,7 @@ html,
 }
 
 .s{
-	background-image:url(../img/css/sprites/sprite.png);
+	background-image:url(/img/css/sprites/sprite.png);
 }
 
 h1,h2,h3,h4,h5,h6,
@@ -212,8 +217,8 @@ html{
 	font-size:0.75em; /* 12px */
 	line-height:1.5; /* 18px */
 	color:#666;
-	background:url(../img/css/page/01.gif) fixed #fff;
-	background:url(../img/css/page/02.gif) fixed #fff;
+	background:url(/img/css/page/01.gif) fixed #fff;
+	background:url(/img/css/page/02.gif) fixed #fff;
 	min-height:100%;
 	padding:2%;
 	overflow-y:scroll;
@@ -281,6 +286,9 @@ Abstraction, as per http://csswizardry.com/2011/09/the-nav-abstraction/
 }
 .nav li{
 	display:inline;
+}
+.sp li{
+	margin-right: 20px;
 }
 .nav a{
 	display:inline-block;
@@ -352,6 +360,28 @@ Abstraction, as per http://csswizardry.com/2011/09/the-nav-abstraction/
 	padding:0.2em 0.35em;
 }
 
+.flabel{
+	width: 80px;
+	float: left;
+}
+
+.signup{
+	margin-left: 14px;
+	bottom: 14px;
+}
+
+.fcontainer {
+	float: left;
+}
+.finner {
+	position:relative;
+	float: left;
+}
+
+.btncontainer {
+	position:relative;
+	float: right;
+}
 
 
 
@@ -368,6 +398,9 @@ h2,.beta{
 }
 h3,.gamma{
 	font-size:1.25em; /* 15px */
+}
+h3,.content{
+	font-size:2em;
 }
 h4,.delta{
 	font-size:1em; /* 16px */
@@ -532,7 +565,7 @@ td .block .btn{
 	}
 
 .event-cal th{
-	background:url(../img/css/tables/splitter.gif) right top no-repeat;
+	background:url(/img/css/tables/splitter.gif) right top no-repeat;
 }
 .event-cal thead{
 	background-position:left top;
